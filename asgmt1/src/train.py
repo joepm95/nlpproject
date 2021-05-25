@@ -9,13 +9,9 @@ from TextProcessor import TextProcessor
 
 def main():
     parser = argparse.ArgumentParser(description='Script to train a language model')
-    parser.add_argument("--train", default="../data/ted/TED.en", type=str,
+    parser.add_argument("--train", default="../data/train.csv", type=str,
                         help="text file containing the training data")
-    parser.add_argument("--voc", default="../data/ted/TED.en.voc", type=str,
-                        help="text file containing the training data")
-    parser.add_argument("--test_input", default="../data/ted/tst2015.input", type=str,
-                        help="text file containing the test data")
-    parser.add_argument("--test_output", default="../data/ted/tst2015.en", type=str,
+    parser.add_argument("--test_input", default="../data/test.csv", type=str,
                         help="text file containing the test data")
 
     args = parser.parse_args()
